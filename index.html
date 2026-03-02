@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbearia Elite</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="loader">
+      <h1>D'LUKA</h1>
+    </div>
+    <header>
+      <div class="logo">
+        <img src="imgs/logobarbearia.png" alt="" width="70" height="70" />
+        <span>D´Luka</span>
+      </div>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#barbeiros">Barbeiros</a>
+        <a href="#agendar">Agendar</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+      <h1>
+        Tradição, Estilo e <br />
+        Excelência há <span id="anos"></span> anos
+      </h1>
+      <p>
+        Desde 2018, a Barbearia D’Luka transforma cortes em experiências. Nosso
+        compromisso vai além do visual — prezamos pela qualidade, pelo
+        atendimento personalizado e, principalmente, pela confortabilidade de
+        cada cliente que passa pela nossa cadeira.
+      </p>
+      <p>
+        Aqui você encontra profissionais qualificados, ambiente moderno e aquele
+        cuidado nos detalhes que faz toda a diferença. Mais do que um corte,
+        entregamos confiança, estilo e presença.
+      </p>
+
+      <button class="btn" onclick="scrollToAgendamento()">
+        Agendar Horário
+      </button>
+    </section>
+
+    <section class="section" id="barbeiros">
+      <h2>Nossa Equipe</h2>
+
+      <div class="barbeiros">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6"
+            alt=""
+          />
+          <h3>Luka</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            nihil excepturi voluptas omnis adipisci sed debitis nulla beatae,
+            eos soluta similique, in ipsum qui iure velit quo. Harum,
+            dignissimos praesentium.
+          </p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+            alt=""
+          />
+          <h3>Gabriel</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+            quis! Error in, iusto exercitationem beatae vel alias earum,
+            voluptatum nostrum ullam aliquid velit. Molestiae quis hic quae
+            dicta, temporibus totam.
+          </p>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f"
+            alt=""
+          />
+          <h3>Wesley</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur sit quibusdam recusandae perspiciatis ea, consequatur
+            sunt adipisci perferendis natus, dolore saepe explicabo. Officia,
+            itaque quia alias quo laborum delectus quaerat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <h2>Serviços & Valores</h2>
+
+      <div class="servicos-grid">
+        <div class="servico-card">
+          <h3>Corte Tradicional</h3>
+          <p>Corte na tesoura ou máquina com acabamento detalhado.</p>
+          <span class="preco">R$ 40</span>
+        </div>
+
+        <div class="servico-card">
+          <h3>Barba Premium</h3>
+          <p>Modelagem completa com toalha quente e finalização.</p>
+          <span class="preco">R$ 35</span>
+        </div>
+
+        <div class="servico-card">
+          <h3>Corte + Barba</h3>
+          <p>Experiência completa com acabamento impecável.</p>
+          <span class="preco">R$ 70</span>
+        </div>
+
+        <div class="servico-card">
+          <h3>Platinado / Luzes</h3>
+          <p>Descoloração profissional com produtos de qualidade.</p>
+          <span class="preco">A partir de R$ 120</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="agendar">
+      <h2>Agende seu Horário</h2>
+
+      <div class="agendamento">
+        <form id="formAgendamento">
+          <div class="form-group">
+            <label>Nome</label>
+            <input type="text" id="nome" required />
+          </div>
+
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="text" id="telefone" required />
+          </div>
+
+          <div class="form-group">
+            <label>Barbeiro</label>
+            <select id="barbeiro" required>
+              <option value="">Selecione</option>
+              <option>Luka</option>
+              <option>Gabriel</option>
+              <option>Wesley</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Escolha os Serviços</label>
+
+            <div class="servicos-opcoes">
+              <div class="servico-item" data-valor="30">
+                <h4>Corte Tradicional</h4>
+                <span>R$30</span>
+              </div>
+
+              <div class="servico-item" data-valor="50">
+                <h4>Corte + Barba</h4>
+                <span>R$50</span>
+              </div>
+
+              <div class="servico-item" data-valor="25">
+                <h4>Barba Completa</h4>
+                <span>R$25</span>
+              </div>
+
+              <div class="servico-item" data-valor="40">
+                <h4>Pigmentação</h4>
+                <span>R$40</span>
+              </div>
+
+              <div class="servico-item" data-valor="15">
+                <h4>Sobrancelha</h4>
+                <span>R$15</span>
+              </div>
+            </div>
+
+            <p
+              id="valorSelecionado"
+              style="margin-top: 15px; color: #00eaff"
+            ></p>
+          </div>
+
+          <div class="form-group">
+            <label>Dia</label>
+            <select id="dia" required>
+              <option value="">Selecione</option>
+              <option>Segunda</option>
+              <option>Terça</option>
+              <option>Quarta</option>
+              <option>Quinta</option>
+              <option>Sexta</option>
+              <option>Sábado</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Horário</label>
+            <select id="horario" required></select>
+          </div>
+
+          <p
+            id="valorSelecionado"
+            style="margin-bottom: 20px; color: #00eaff"
+          ></p>
+
+          <button class="btn" type="submit">Confirmar Agendamento</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>© 2026 D´Luka - Todos os direitos reservados.</footer>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+      function scrollToAgendamento() {
+        document
+          .getElementById("agendar")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      let agendamentos = {};
+
+      const horarioSelect = document.getElementById("horario");
+      const diaSelect = document.getElementById("dia");
+      const barbeiroSelect = document.getElementById("barbeiro");
+
+      function gerarHorarios() {
+        horarioSelect.innerHTML = "";
+
+        const barbeiro = barbeiroSelect.value;
+        const dia = diaSelect.value;
+
+        if (!barbeiro || !dia) return;
+
+        for (let h = 8; h <= 20; h++) {
+          let hora = (h < 10 ? "0" + h : h) + ":00";
+
+          let option = document.createElement("option");
+          option.value = hora;
+          option.textContent = hora;
+
+          if (
+            agendamentos[barbeiro] &&
+            agendamentos[barbeiro][dia] &&
+            agendamentos[barbeiro][dia].includes(hora)
+          ) {
+            option.disabled = true;
+            option.textContent += " (Indisponível)";
+          }
+
+          horarioSelect.appendChild(option);
+        }
+      }
+
+      barbeiroSelect.addEventListener("change", gerarHorarios);
+      diaSelect.addEventListener("change", gerarHorarios);
+
+      document
+        .getElementById("formAgendamento")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const nome = document.getElementById("nome").value;
+          const barbeiro = barbeiroSelect.value;
+          const dia = diaSelect.value;
+          const horario = horarioSelect.value;
+
+          if (!barbeiro || !dia || !horario) {
+            alert("Preencha todos os campos.");
+            return;
+          }
+
+          // 🔴 VALIDAÇÃO REAL (impede duplicado mesmo que o select falhe)
+          if (
+            agendamentos[barbeiro] &&
+            agendamentos[barbeiro][dia] &&
+            agendamentos[barbeiro][dia].includes(horario)
+          ) {
+            alert("Esse horário já está ocupado para esse barbeiro.");
+            return;
+          }
+
+          if (!agendamentos[barbeiro]) {
+            agendamentos[barbeiro] = {};
+          }
+
+          if (!agendamentos[barbeiro][dia]) {
+            agendamentos[barbeiro][dia] = [];
+          }
+
+          agendamentos[barbeiro][dia].push(horario);
+
+          alert("Agendamento confirmado!");
+
+          gerarHorarios();
+          this.reset();
+          horarioSelect.innerHTML = "";
+        });
+
+      document.addEventListener("mousemove", (e) => {
+        document.body.style.setProperty("--x", e.clientX + "px");
+        document.body.style.setProperty("--y", e.clientY + "px");
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      document.querySelectorAll("section").forEach((sec) => {
+        sec.classList.add("hidden");
+        observer.observe(sec);
+      });
+
+      const anoFundacao = 2018;
+      const anoAtual = new Date().getFullYear();
+      document.getElementById("anos").textContent = anoAtual - anoFundacao;
+
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("loader").style.display = "none";
+        }, 1500);
+      });
+
+      const cursor = document.querySelector(".cursor");
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+
+      window.addEventListener("load", () => {
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 40 },
+            size: { value: 3 },
+            color: { value: "#00eaff" },
+            line_linked: { enable: true, color: "#00eaff" },
+          },
+        });
+      });
+
+      const links = document.querySelectorAll("nav a");
+
+      const nav = document.querySelector("nav");
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      });
+
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.style.background = "rgba(0,0,0,0.8)";
+        } else {
+          header.style.background = "rgba(3, 31, 46, 0.6)";
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector("nav");
+
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("active");
+          toggle.classList.toggle("active");
+        });
+      });
+
+
+      const servicos = document.querySelectorAll(".servico-item");
+      const valor = document.getElementById("valorSelecionado");
+
+      let total = 0;
+
+      servicos.forEach((servico) => {
+        servico.addEventListener("click", () => {
+          servico.classList.toggle("ativo");
+
+          const preco = parseFloat(servico.dataset.valor);
+
+          if (servico.classList.contains("ativo")) {
+            total += preco;
+          } else {
+            total -= preco;
+          }
+
+          valor.textContent = total > 0 ? "Total: R$" + total : "";
+        });
+      });
+    </script>
+
+    <div id="particles-js"></div>
+    <div class="cursor"></div>
+  </body>
+</html>
